@@ -15,7 +15,6 @@ public class ResultPage extends BasePage {
     }
 
     private static final By customerIDValue = By.xpath("//b[normalize-space(.)='Customer ID']/ancestor::td/following-sibling::td//h3");
-    private static final By customerIDTitle = By.xpath("//b[normalize-space(.)='Customer ID']");
     private static final By homeButton = By.xpath("//a[@class='button']");
     
   

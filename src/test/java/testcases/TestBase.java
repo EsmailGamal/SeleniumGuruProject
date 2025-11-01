@@ -4,11 +4,7 @@ import drivers.DriverFactory;
 import drivers.DriverHolder;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Listeners;
+import org.testng.annotations.*;
 import support.TestListeners;
 
 @Listeners({TestListeners.class})
@@ -18,7 +14,7 @@ public class TestBase {
     protected static final String Base_URL = ConfigManager.getBaseUrl();
 
     @Parameters("browser")
-    @BeforeTest
+    @BeforeMethod
     public void setupDriver(@Optional("chrome") String browser) throws Exception {
         try {
 
@@ -38,7 +34,7 @@ public class TestBase {
         }
     }
 
-    @AfterTest
+    @AfterMethod
     public void tearDown() throws Exception {
         try {
             if (driver != null) {

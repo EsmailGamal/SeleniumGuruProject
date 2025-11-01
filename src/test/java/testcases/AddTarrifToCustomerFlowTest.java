@@ -11,7 +11,6 @@ import java.util.Map;
 
 public class AddTarrifToCustomerFlowTest extends TestBase {
 
-   
     @Test(priority = 2, description = "Verify Tariff Plan Is assigned to CustomerSuccessfully", retryAnalyzer = RetryAnalyzer.class)
     public void verifyTarrifPlanAssignedSuccessfully() {
         Map<String, String> user = UserInfo.get("user1");
@@ -44,7 +43,5 @@ public class AddTarrifToCustomerFlowTest extends TestBase {
         Assert.assertTrue(tariffPlanPage.isTarrifPlanAssignedSuccessfully(), 
                 "Success message should be visible indicating Tariff Plan assigned successfully");
     }
-
-
 }
 

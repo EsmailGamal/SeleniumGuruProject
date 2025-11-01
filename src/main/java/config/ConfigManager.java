@@ -52,7 +52,7 @@ public class ConfigManager {
     }
 
     public static String getBaseUrl() {
-        return get("baseUrl", "https://www.amazon.eg/-/en/ref=nav_logo");
+        return get("baseUrl", "https://demo.guru99.com/telecom/");
     }
 
     public static String getBrowser() {

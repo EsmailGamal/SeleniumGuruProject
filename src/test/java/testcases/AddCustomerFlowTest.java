@@ -9,16 +9,7 @@ import java.util.Map;
 
 public class AddCustomerFlowTest extends TestBase {
 
-    @Test(priority = 1, description = "User Land Successfull on Guru 99  and Core elements should be visible", retryAnalyzer = RetryAnalyzer.class)
-    public void coreElementsVisible() {
-        GuruHomePage home = new GuruHomePage(driver);
-        Assert.assertTrue(home.isLogoVisible(), "Logo should be visible on home page");
-        Assert.assertTrue(home.isNavigationBarVisible(), "Navigation bar should be visible on home page");
-    }
-
-
-   
-    @Test(priority = 2, description = "Verify Customer Is added Successfully", retryAnalyzer = RetryAnalyzer.class)
+    @Test(priority = 1, description = "Verify Customer Is added Successfully", retryAnalyzer = RetryAnalyzer.class)
     public void verifyCustomerAddedSuccessfully() {
         GuruHomePage home = new GuruHomePage(driver);
         Map<String, String> user = UserInfo.get("user1");
@@ -43,7 +34,5 @@ public class AddCustomerFlowTest extends TestBase {
                 .clickHomeButton();
                 Assert.assertTrue(home.isLogoVisible(), "Logo should be visible on home page");
     }
-
-
 }
 

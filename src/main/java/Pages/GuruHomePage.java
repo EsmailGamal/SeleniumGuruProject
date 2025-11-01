@@ -45,24 +45,8 @@ public class GuruHomePage extends BasePage {
         }
     }
 
-    public boolean isNavigationBarVisible() {
-        try {
-            return Waits.waitForVisible(driver, navigationBar).isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    public String getHeaderText() {
-        return Waits.waitForVisible(driver, pageTitle).getText();
-    }
-
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
-    }
-
-    public boolean urlContains(String expectedSubstring) {
-        return getCurrentUrl().contains(expectedSubstring);
     }
 
 }

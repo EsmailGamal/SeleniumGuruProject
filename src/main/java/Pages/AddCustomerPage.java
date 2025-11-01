@@ -14,9 +14,7 @@ public class AddCustomerPage extends BasePage {
         this.actions = new ElementActions(driver);
     }
 
-    private static final By addCustomerTitle = By.xpath("//h1[normalize-space()='Add Customer']");
     private static final By doneCheckRadioButton = By.xpath("//label[@for='done']");
-    private static final By pendingRadioButton = By.xpath("//label[@for='pending']");
     private static final By firstnameField = By.id("fname");
     private static final By lastnameField = By.id("lname");
     private static final By emailField = By.id("email");
@@ -26,11 +24,6 @@ public class AddCustomerPage extends BasePage {
 
     public AddCustomerPage clickDoneCheckRadioButton() {
         actions.click(doneCheckRadioButton);
-        return this;
-    }
-
-    public AddCustomerPage clickPendingCheckRadioButton() {
-        actions.click(pendingRadioButton);
         return this;
     }
 
